@@ -188,6 +188,22 @@ print(chamarEmployee.salary)
 // Crie uma classe Shape que tenha propriedades width e height do tipo Double. Em seguida, crie uma subclasse Rectangle que herde de Shape e tenha um método area que retorna a área do retângulo (ou seja, width * height). O construtor de Rectangle deve chamar o construtor da superclasse para inicializar as propriedades width e height.
 
 
+class Shape {
+    var width: Double
+    var height: Double
+    
+    init(width: Double, height: Double) {
+        self.width = width
+        self.height = height
+    }
+}
 
-
-
+class Rectangle: Shape {
+    func area() -> Double {
+        return width * height
+    }
+    
+    override init(width: Double, height: Double) {
+        super.init(width: width, height: height)
+    }
+}
