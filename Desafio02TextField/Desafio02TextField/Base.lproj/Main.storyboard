@@ -45,6 +45,9 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Entrar"/>
+                                <connections>
+                                    <segue destination="CLx-hP-vF6" kind="show" id="ECC-fr-QLz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -76,10 +79,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="-27"/>
+            <point key="canvasLocation" x="-551" y="-73"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Zr2-Ss-8vV">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="CLx-hP-vF6" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C9b-Fc-EId">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro realizado com sucesso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDN-ln-0aP">
+                                <rect key="frame" x="27" y="320" width="321" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sLq-ab-H3z"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="MDN-ln-0aP" firstAttribute="centerY" secondItem="C9b-Fc-EId" secondAttribute="centerY" id="HKK-is-khQ"/>
+                            <constraint firstItem="MDN-ln-0aP" firstAttribute="centerX" secondItem="C9b-Fc-EId" secondAttribute="centerX" id="gBg-Zv-757"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9JO-aB-g4i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NkZ-Zh-Atb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="-73"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
