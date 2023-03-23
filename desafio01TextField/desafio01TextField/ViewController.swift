@@ -12,13 +12,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var enderecoTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
-    
+    @IBOutlet weak var cadastrarButton: UIButton!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         configName()
         configEndereco()
         configPassword()
+        configButton()
         self.nameTextField.delegate = self
         self.enderecoTextField.delegate = self
         self.passwordTextField.delegate = self
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func cadastrarButton(_ sender: UIButton) {
+        
     }
     
     private func configName() {
@@ -49,7 +51,7 @@ class ViewController: UIViewController {
     }
     
     private func configButton() {
-        
+        cadastrarButton.isEnabled = false
     }
     
 }
@@ -59,14 +61,20 @@ class ViewController: UIViewController {
 extension ViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textFieldDidBeginEditing")
         textField.layer.borderColor = UIColor.blue.cgColor
         textField.layer.borderWidth = 1
+        
     }
     
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("textFieldDidEndEditing")
+        if nameTextField.text?.isEmpty == false && enderecoTextField.text?.isEmpty == false && passwordTextField.text?.isEmpty == false {
+            cadastrarButton.isEnabled = true
+            print("Cadastro realizado com sucesso")
+        } else {
+            cadastrarButton.isEnabled = false
+        }
+        
         if textField.text == "" {
             textField.layer.borderWidth = 2
             textField.layer.borderColor = UIColor.red.cgColor
@@ -78,7 +86,6 @@ extension ViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn")
         textField.resignFirstResponder()
         return true
     }
