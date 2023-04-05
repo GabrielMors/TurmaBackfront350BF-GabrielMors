@@ -1,5 +1,5 @@
 //
-//  tela2.swift
+//  tela3.swift
 //  navegacaoDetela
 //
 //  Created by Gabriel Mors  on 05/04/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class tela2: UIViewController {
+class tela3: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
@@ -17,12 +17,10 @@ class tela2: UIViewController {
         super.viewDidLoad()
     }
     
-    
-    
-    @IBAction func voltarTappedButton(_ sender: Any) {
-        let vc = UIStoryboard(name: "tela3", bundle: nil).instantiateViewController(withIdentifier: "tela3") as? tela3
+    @IBAction func proximoButton(_ sender: Any) {
+        let vc = UIStoryboard(name: "tela4", bundle: nil).instantiateViewController(withIdentifier: "tela4") as? tela4
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
-    
+
 }

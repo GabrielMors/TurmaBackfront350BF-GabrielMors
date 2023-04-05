@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  tela5.swift
 //  navegacaoDetela
 //
 //  Created by Gabriel Mors  on 05/04/23.
@@ -7,17 +7,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class tela5: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
-    @IBAction func button(_ sender: Any) {
-        let vc = UIStoryboard(name: "tela2", bundle: nil).instantiateViewController(withIdentifier: "tela2") as? tela2
+    
+    @IBAction func button5(_ sender: Any) {
+        let vc = UIStoryboard(name: "tela6", bundle: nil).instantiateViewController(withIdentifier: "tela6") as? tela6
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
+    
 }
-

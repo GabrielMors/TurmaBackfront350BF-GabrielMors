@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eqb-pb-Xz1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -8,69 +8,72 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tela2-->
+        <!--Tela5-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="tela2" id="Y6W-OH-hqX" customClass="tela2" customModule="navegacaoDetela" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tela5" id="Y6W-OH-hqX" customClass="tela5" customModule="navegacaoDetela" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zr0-PS-QNs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-8j-T62">
                                 <rect key="frame" x="136.66666666666666" y="406" width="119.99999999999997" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="nRm-wO-fyn"/>
-                                    <constraint firstAttribute="height" constant="40" id="w60-ag-qr4"/>
+                                    <constraint firstAttribute="width" constant="120" id="5Pv-3p-vjd"/>
+                                    <constraint firstAttribute="height" constant="40" id="vZ4-ao-aYT"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="proxima"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Próximo"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="voltarTappedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hPH-m6-raU"/>
+                                    <action selector="button5:" destination="41r-Gl-cl2" eventType="touchUpInside" id="pVr-zT-T1X"/>
+                                    <action selector="button5:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qhb-uT-kWS"/>
+                                    <action selector="button6:" destination="41r-Gl-cl2" eventType="touchUpInside" id="NhK-Dw-4RS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
                         <constraints>
-                            <constraint firstItem="zr0-PS-QNs" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="UAg-Hs-wCZ"/>
-                            <constraint firstItem="zr0-PS-QNs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="a8Y-hf-lSP"/>
+                            <constraint firstItem="f8q-8j-T62" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="HtZ-UF-Z1Z"/>
+                            <constraint firstItem="f8q-8j-T62" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="sqs-ch-uBW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="g28-Pf-lFa"/>
+                    <navigationItem key="navigationItem" id="Oaz-u5-t8y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="41r-Gl-cl2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="275.57251908396944" y="96.478873239436624"/>
+            <point key="canvasLocation" x="1049.6183206106871" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Maf-QO-uOw">
+        <scene sceneID="dyu-Dj-63l">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Eqb-pb-Xz1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fqz-XO-z0V" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNb-mU-S8w">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g7W-X7-pzD">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Kt8-aL-E1Y"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="FRd-eo-NMo"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9at-so-m7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flf-fi-NcH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-651.14503816793888" y="96.478873239436624"/>
+            <point key="canvasLocation" x="122.90076335877862" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

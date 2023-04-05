@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  tela4.swift
 //  navegacaoDetela
 //
 //  Created by Gabriel Mors  on 05/04/23.
@@ -7,17 +7,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class tela4: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
     }
-
-    @IBAction func button(_ sender: Any) {
-        let vc = UIStoryboard(name: "tela2", bundle: nil).instantiateViewController(withIdentifier: "tela2") as? tela2
+    
+    @IBAction func proximo4Button(_ sender: Any) {
+        let vc = UIStoryboard(name: "tela5", bundle: nil).instantiateViewController(withIdentifier: "tela5") as? tela5
         navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+
     }
     
 }
-
