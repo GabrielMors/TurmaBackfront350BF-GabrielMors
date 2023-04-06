@@ -9,15 +9,24 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var inicioLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configLabel()
     }
 
     @IBAction func button(_ sender: Any) {
-        let vc = UIStoryboard(name: "tela2", bundle: nil).instantiateViewController(withIdentifier: "tela2") as? tela2
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        performSegue(withIdentifier: "tela2", sender: nil)
+//        let vc = UIStoryboard(name: "tela2", bundle: nil).instantiateViewController(withIdentifier: "tela2") as? tela2
+//        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
+    
+    private func configLabel() {
+        inicioLabel.clipsToBounds = true
+        inicioLabel.layer.cornerRadius = 20
+    }
 }
 

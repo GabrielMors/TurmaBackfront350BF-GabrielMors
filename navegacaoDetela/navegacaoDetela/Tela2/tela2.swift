@@ -20,8 +20,9 @@ class tela2: UIViewController {
     
     
     @IBAction func voltarTappedButton(_ sender: Any) {
-        let vc = UIStoryboard(name: "tela3", bundle: nil).instantiateViewController(withIdentifier: "tela3") as? tela3
-        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
+        dismiss(animated: true)
+//        let vc = UIStoryboard(name: "tela3", bundle: nil).instantiateViewController(withIdentifier: "tela3") as? tela3
+//        navigationController?.pushViewController(vc ?? UIViewController(), animated: true)
     }
     
     
