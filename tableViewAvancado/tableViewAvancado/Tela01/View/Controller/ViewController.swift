@@ -11,6 +11,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var count = 0
+    
     var dataGrup: [Grup] = [Grup(NameImage: "person.3.fill", nameLabel: "Yan Alpha", nameJob: "Dev iOS At Ambev", salary: "R$:8.500"),
                             Grup(NameImage: "person.3.fill", nameLabel: "Mikael", nameJob: "Dev iOS", salary: "R$:5.000"),
                             Grup(NameImage: "person.3.fill", nameLabel: "Gabriel Mors", nameJob: "Dev iOS", salary: "R$:5.000"),
@@ -54,6 +56,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        count += 1
+        print(count)
+        print("indexPath", indexPath.row)
         if indexPath.row == 0 {
             return 133
         } else {
@@ -62,3 +67,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
