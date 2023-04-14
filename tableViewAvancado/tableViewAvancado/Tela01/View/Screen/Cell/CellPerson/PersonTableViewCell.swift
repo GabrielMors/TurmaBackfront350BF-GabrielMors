@@ -9,6 +9,9 @@ import UIKit
 
 class PersonTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    
     static let identifier: String = "PersonTableViewCell"
     static func nib() -> UINib {
         UINib(nibName: identifier.self, bundle: nil)
@@ -16,8 +19,10 @@ class PersonTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
+            }
     
+    public func setupCell(person: Person) {
+        photoImageView.image = UIImage(systemName: person.nameImage)
+        nameLabel.text = person.name
+    }
 }
