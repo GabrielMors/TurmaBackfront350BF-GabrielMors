@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C43C4B0529E9CC8C0013D509 /* tela02.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43C4B0429E9CC8C0013D509 /* tela02.storyboard */; };
+		C43C4B0729E9CCA20013D509 /* tela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C4B0629E9CCA20013D509 /* tela02.swift */; };
+		C43C4B0A29E9CCDE0013D509 /* tela03.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C43C4B0929E9CCDE0013D509 /* tela03.storyboard */; };
+		C43C4B0C29E9CD030013D509 /* tela03.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43C4B0B29E9CD030013D509 /* tela03.swift */; };
 		C462CA5029E8C62400CC8065 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462CA4F29E8C62400CC8065 /* AppDelegate.swift */; };
 		C462CA5229E8C62400CC8065 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462CA5129E8C62400CC8065 /* SceneDelegate.swift */; };
 		C462CA5429E8C62400CC8065 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C462CA5329E8C62400CC8065 /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C43C4B0429E9CC8C0013D509 /* tela02.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tela02.storyboard; sourceTree = "<group>"; };
+		C43C4B0629E9CCA20013D509 /* tela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tela02.swift; sourceTree = "<group>"; };
+		C43C4B0929E9CCDE0013D509 /* tela03.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = tela03.storyboard; sourceTree = "<group>"; };
+		C43C4B0B29E9CD030013D509 /* tela03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tela03.swift; sourceTree = "<group>"; };
 		C462CA4C29E8C62400CC8065 /* tableViewAvancado.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tableViewAvancado.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C462CA4F29E8C62400CC8065 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C462CA5129E8C62400CC8065 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C43C4B0329E9CC790013D509 /* Tela02 */ = {
+			isa = PBXGroup;
+			children = (
+				C43C4B0429E9CC8C0013D509 /* tela02.storyboard */,
+				C43C4B0629E9CCA20013D509 /* tela02.swift */,
+			);
+			path = Tela02;
+			sourceTree = "<group>";
+		};
+		C43C4B0829E9CCCC0013D509 /* Tela03 */ = {
+			isa = PBXGroup;
+			children = (
+				C43C4B0929E9CCDE0013D509 /* tela03.storyboard */,
+				C43C4B0B29E9CD030013D509 /* tela03.swift */,
+			);
+			path = Tela03;
+			sourceTree = "<group>";
+		};
 		C462CA4329E8C62400CC8065 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +94,8 @@
 		C462CA4E29E8C62400CC8065 /* tableViewAvancado */ = {
 			isa = PBXGroup;
 			children = (
+				C43C4B0829E9CCCC0013D509 /* Tela03 */,
+				C43C4B0329E9CC790013D509 /* Tela02 */,
 				C462CA7229E9A83700CC8065 /* Tela01 */,
 				C462CA6C29E98DB500CC8065 /* Resources */,
 				C462CA5D29E8C62500CC8065 /* Info.plist */,
@@ -223,7 +251,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C43C4B0529E9CC8C0013D509 /* tela02.storyboard in Resources */,
 				C48CA92E29E9B1A000F3ED32 /* GrupTableViewCell.xib in Resources */,
+				C43C4B0A29E9CCDE0013D509 /* tela03.storyboard in Resources */,
 				C462CA5C29E8C62500CC8065 /* LaunchScreen.storyboard in Resources */,
 				C462CA5929E8C62500CC8065 /* Assets.xcassets in Resources */,
 				C462CA6729E98AAD00CC8065 /* PersonTableViewCell.xib in Resources */,
@@ -241,10 +271,12 @@
 				C462CA6A29E98ABD00CC8065 /* Person.swift in Sources */,
 				C462CA5429E8C62400CC8065 /* ViewController.swift in Sources */,
 				C462CA5029E8C62400CC8065 /* AppDelegate.swift in Sources */,
+				C43C4B0C29E9CD030013D509 /* tela03.swift in Sources */,
 				C48CA92D29E9B1A000F3ED32 /* GrupTableViewCell.swift in Sources */,
 				C48CA93029E9B24D00F3ED32 /* Grup.swift in Sources */,
 				C462CA6629E98AAD00CC8065 /* PersonTableViewCell.swift in Sources */,
 				C462CA5229E8C62400CC8065 /* SceneDelegate.swift in Sources */,
+				C43C4B0729E9CCA20013D509 /* tela02.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

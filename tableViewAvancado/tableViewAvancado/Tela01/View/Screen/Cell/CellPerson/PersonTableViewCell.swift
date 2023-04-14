@@ -25,4 +25,6 @@ class PersonTableViewCell: UITableViewCell {
         photoImageView.image = UIImage(systemName: person.nameImage)
         nameLabel.text = person.name
     }
+    
+    
 }

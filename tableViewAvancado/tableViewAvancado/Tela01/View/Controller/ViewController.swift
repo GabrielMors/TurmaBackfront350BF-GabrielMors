@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var count = 0
+    var altura01: CGFloat = 138
+    var altura02: CGFloat = 158
     
     var dataGrup: [Grup] = [Grup(NameImage: "person.3.fill", nameLabel: "Yan Alpha", nameJob: "Dev iOS At Ambev", salary: "R$:8.500"),
                             Grup(NameImage: "person.3.fill", nameLabel: "Mikael", nameJob: "Dev iOS", salary: "R$:5.000"),
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()
+        
     }
     
     private func configTableView() {
@@ -38,6 +41,16 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var storyboardName = "tela02" //seta o nome para StoryboardName
+        if indexPath.row != 0 { // se o index for diferente de zero, ira iniciar a tela03
+            storyboardName = "tela03"  //(isso é como se fosse o "Else") - setando o nome do StoryboadName
+        }
+        var storyboard = UIStoryboard(name: storyboardName, bundle: nil) // passando a tela02 ou tela03
+        let vc = storyboard.instantiateViewController(withIdentifier: storyboardName) // criando vc e passando o StoryboadName
+        navigationController?.pushViewController(vc , animated: true) // fazendo a navegações de tela com navigationController
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1 + dataGrup.count
@@ -60,9 +73,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         print(count)
         print("indexPath", indexPath.row)
         if indexPath.row == 0 {
-            return 133
+            return altura01
         } else {
-            return 158
+            return altura02
         }
     }
     
