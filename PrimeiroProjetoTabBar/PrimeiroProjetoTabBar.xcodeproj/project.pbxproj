@@ -15,6 +15,7 @@
 		C4CC78A429F89B280055DC8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CC78A229F89B280055DC8A /* LaunchScreen.storyboard */; };
 		C4CC78AC29F8A08C0055DC8A /* Tela02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC78AB29F8A08C0055DC8A /* Tela02ViewController.swift */; };
 		C4CC78AE29F8A0B80055DC8A /* Tela03ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC78AD29F8A0B80055DC8A /* Tela03ViewController.swift */; };
+		C4CC78B029F8AD390055DC8A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC78AF29F8AD390055DC8A /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C4CC78A529F89B280055DC8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4CC78AB29F8A08C0055DC8A /* Tela02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02ViewController.swift; sourceTree = "<group>"; };
 		C4CC78AD29F8A0B80055DC8A /* Tela03ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela03ViewController.swift; sourceTree = "<group>"; };
+		C4CC78AF29F8AD390055DC8A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				C4CC789B29F89B260055DC8A /* Tela01ViewController.swift */,
 				C4CC78AB29F8A08C0055DC8A /* Tela02ViewController.swift */,
 				C4CC78AD29F8A0B80055DC8A /* Tela03ViewController.swift */,
+				C4CC78AF29F8AD390055DC8A /* TabBarController.swift */,
 				C4CC789D29F89B260055DC8A /* Main.storyboard */,
 				C4CC78A029F89B280055DC8A /* Assets.xcassets */,
 				C4CC78A229F89B280055DC8A /* LaunchScreen.storyboard */,
@@ -147,6 +150,7 @@
 				C4CC78AC29F8A08C0055DC8A /* Tela02ViewController.swift in Sources */,
 				C4CC789C29F89B260055DC8A /* Tela01ViewController.swift in Sources */,
 				C4CC789829F89B260055DC8A /* AppDelegate.swift in Sources */,
+				C4CC78B029F8AD390055DC8A /* TabBarController.swift in Sources */,
 				C4CC789A29F89B260055DC8A /* SceneDelegate.swift in Sources */,
 				C4CC78AE29F8A0B80055DC8A /* Tela03ViewController.swift in Sources */,
 			);
