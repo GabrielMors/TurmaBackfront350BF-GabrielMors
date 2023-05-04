@@ -9,11 +9,23 @@ import UIKit
 
 class Tela02: UIViewController {
 
+    @IBOutlet weak var macUIButton: UIButton!
+    
+    @IBOutlet weak var iMacUIButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func tappeMacImageView(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    
+    @IBAction func tappedImacImageView(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
+    
 }

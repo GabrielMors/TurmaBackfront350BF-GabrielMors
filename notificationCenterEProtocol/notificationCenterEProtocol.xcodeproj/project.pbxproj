@@ -11,10 +11,10 @@
 		C42FA4962A046ACD00F13D41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FA4952A046ACD00F13D41 /* SceneDelegate.swift */; };
 		C42FA4982A046ACD00F13D41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FA4972A046ACD00F13D41 /* ViewController.swift */; };
 		C42FA49B2A046ACD00F13D41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FA4992A046ACD00F13D41 /* Main.storyboard */; };
-		C42FA49D2A046ACF00F13D41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42FA49C2A046ACF00F13D41 /* Assets.xcassets */; };
 		C42FA4A02A046ACF00F13D41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FA49E2A046ACF00F13D41 /* LaunchScreen.storyboard */; };
 		C42FA4AB2A046C6000F13D41 /* Tela02.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FA4AA2A046C6000F13D41 /* Tela02.storyboard */; };
 		C42FA4AD2A046C7300F13D41 /* Tela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FA4AC2A046C7300F13D41 /* Tela02.swift */; };
+		C46F7D682A0472DC0094CA24 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46F7D672A0472DC0094CA24 /* assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +23,11 @@
 		C42FA4952A046ACD00F13D41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C42FA4972A046ACD00F13D41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C42FA49A2A046ACD00F13D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C42FA49C2A046ACF00F13D41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C42FA49F2A046ACF00F13D41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C42FA4A12A046ACF00F13D41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C42FA4AA2A046C6000F13D41 /* Tela02.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tela02.storyboard; sourceTree = "<group>"; };
 		C42FA4AC2A046C7300F13D41 /* Tela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02.swift; sourceTree = "<group>"; };
+		C46F7D672A0472DC0094CA24 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +64,7 @@
 				C42FA4A82A046C4D00F13D41 /* Tela01 */,
 				C42FA4A72A046C3D00F13D41 /* Resources */,
 				C42FA4A12A046ACF00F13D41 /* Info.plist */,
+				C46F7D672A0472DC0094CA24 /* assets.xcassets */,
 			);
 			path = notificationCenterEProtocol;
 			sourceTree = "<group>";
@@ -71,7 +72,6 @@
 		C42FA4A72A046C3D00F13D41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C42FA49C2A046ACF00F13D41 /* Assets.xcassets */,
 				C42FA49E2A046ACF00F13D41 /* LaunchScreen.storyboard */,
 				C42FA4932A046ACD00F13D41 /* AppDelegate.swift */,
 				C42FA4952A046ACD00F13D41 /* SceneDelegate.swift */,
@@ -82,8 +82,8 @@
 		C42FA4A82A046C4D00F13D41 /* Tela01 */ = {
 			isa = PBXGroup;
 			children = (
-				C42FA4972A046ACD00F13D41 /* ViewController.swift */,
 				C42FA4992A046ACD00F13D41 /* Main.storyboard */,
+				C42FA4972A046ACD00F13D41 /* ViewController.swift */,
 			);
 			path = Tela01;
 			sourceTree = "<group>";
@@ -156,8 +156,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C42FA4AB2A046C6000F13D41 /* Tela02.storyboard in Resources */,
+				C46F7D682A0472DC0094CA24 /* assets.xcassets in Resources */,
 				C42FA4A02A046ACF00F13D41 /* LaunchScreen.storyboard in Resources */,
-				C42FA49D2A046ACF00F13D41 /* Assets.xcassets in Resources */,
 				C42FA49B2A046ACD00F13D41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

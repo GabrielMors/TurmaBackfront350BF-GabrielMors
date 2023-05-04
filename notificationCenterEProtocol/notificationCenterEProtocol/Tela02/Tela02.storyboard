@@ -1,26 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tela02-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Tela02" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="Tela02" customModule="notificationCenterEProtocol" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opções" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASO-2S-DTS">
+                                <rect key="frame" x="20" y="133" width="338" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQI-o2-GgG">
+                                <rect key="frame" x="104" y="392" width="170" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="MKC-PL-sak"/>
+                                    <constraint firstAttribute="height" constant="150" id="kHX-lC-87l"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="Image.png"/>
+                                <connections>
+                                    <action selector="tappedImacImageView:" destination="5cR-ft-2g9" eventType="touchUpInside" id="sl8-mW-DxV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1A-mD-R2i">
+                                <rect key="frame" x="104" y="198" width="170" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="CQe-DH-E6R"/>
+                                    <constraint firstAttribute="height" constant="150" id="DLG-XN-JB6"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Macbook"/>
+                                <connections>
+                                    <action selector="tappeMacImageView:" destination="5cR-ft-2g9" eventType="touchUpInside" id="hvW-nq-axw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fQI-o2-GgG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="104" id="9DS-Xr-ta3"/>
+                            <constraint firstItem="ASO-2S-DTS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="DHU-bq-6Gx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ASO-2S-DTS" secondAttribute="trailing" constant="20" id="HOt-XN-pKf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="G1A-mD-R2i" secondAttribute="trailing" constant="104" id="NLc-8S-6OG"/>
+                            <constraint firstItem="ASO-2S-DTS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="74" id="ZbB-Gq-VB8"/>
+                            <constraint firstItem="G1A-mD-R2i" firstAttribute="top" secondItem="ASO-2S-DTS" secondAttribute="bottom" constant="20" id="kfP-cc-V1G"/>
+                            <constraint firstItem="G1A-mD-R2i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="104" id="od0-6a-Jya"/>
+                            <constraint firstItem="fQI-o2-GgG" firstAttribute="top" secondItem="G1A-mD-R2i" secondAttribute="bottom" constant="44" id="qaF-5p-9R6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="fQI-o2-GgG" secondAttribute="trailing" constant="104" id="zQG-j3-48A"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="iMacUIButton" destination="fQI-o2-GgG" id="I4X-he-g9a"/>
+                        <outlet property="macUIButton" destination="G1A-mD-R2i" id="vTD-S2-HZG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="5cR-ft-2g9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image.png" width="512" height="512"/>
+        <image name="Macbook" width="1499" height="802"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
