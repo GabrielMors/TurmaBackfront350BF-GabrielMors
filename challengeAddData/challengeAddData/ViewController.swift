@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var viewModel: ViewModel = ViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configBackground()
@@ -96,7 +98,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = 
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PersonCell.self), for: indexPath) as? PersonCell
+        
+        return cell ?? UITableViewCell()
     }
     
 }
