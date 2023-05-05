@@ -1,0 +1,22 @@
+//
+//  ViewModel.swift
+//  challengeAddData
+//
+//  Created by Gabriel Mors  on 05/05/23.
+//
+
+import UIKit
+
+class ViewModel {
+    
+    private var listForCell: [String] = []
+    
+    
+    public func numberOfRowsInSection() {
+
+    }
+    
+    public func cellForRowAt() {
+        
+    }
+}
