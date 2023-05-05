@@ -29,8 +29,9 @@
                                     <constraint firstAttribute="height" constant="150" id="kHX-lC-87l"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="Image.png"/>
+                                <state key="normal" title="Button" image="Imac"/>
                                 <connections>
+                                    <action selector="tappedImacImageView:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4wD-Vj-GPR"/>
                                     <action selector="tappedImacImageView:" destination="5cR-ft-2g9" eventType="touchUpInside" id="sl8-mW-DxV"/>
                                 </connections>
                             </button>
@@ -43,6 +44,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="Macbook"/>
                                 <connections>
+                                    <action selector="tappeMacImageView:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="geq-QP-V6I"/>
                                     <action selector="tappeMacImageView:" destination="5cR-ft-2g9" eventType="touchUpInside" id="hvW-nq-axw"/>
                                 </connections>
                             </button>
@@ -64,6 +66,7 @@
                     <connections>
                         <outlet property="iMacUIButton" destination="fQI-o2-GgG" id="I4X-he-g9a"/>
                         <outlet property="macUIButton" destination="G1A-mD-R2i" id="vTD-S2-HZG"/>
+                        <outlet property="titleLabel" destination="ASO-2S-DTS" id="NiV-Lp-ufI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -73,7 +76,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image.png" width="512" height="512"/>
+        <image name="Imac" width="512" height="512"/>
         <image name="Macbook" width="1499" height="802"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -58,6 +58,8 @@
                     </view>
                     <connections>
                         <outlet property="clicarUIButton" destination="doG-ot-wKw" id="Ack-y4-7Wm"/>
+                        <outlet property="logoImageView" destination="vom-qP-P5b" id="ddL-E8-B87"/>
+                        <outlet property="titleLabel" destination="lmt-3T-rlO" id="suK-mp-VPI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
