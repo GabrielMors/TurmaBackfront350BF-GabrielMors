@@ -22,13 +22,13 @@ class Tela02: UIViewController {
     }
     
     @IBAction func tappeMacImageView(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name("macbook"), object: UIColor.red)
+        NotificationCenter.default.post(name: .macbook, object: UIColor.purple)
         dismiss(animated: true)
     }
 
     
     @IBAction func tappedImacImageView(_ sender: UIButton) {
-        NotificationCenter.default.post(name: Notification.Name("imac"), object: nil)
+        NotificationCenter.default.post(name: .imac, object: UIColor.red)
         dismiss(animated: true)
     }
     

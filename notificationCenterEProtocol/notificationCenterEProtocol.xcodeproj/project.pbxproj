@@ -15,6 +15,7 @@
 		C42FA4AB2A046C6000F13D41 /* Tela02.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C42FA4AA2A046C6000F13D41 /* Tela02.storyboard */; };
 		C42FA4AD2A046C7300F13D41 /* Tela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FA4AC2A046C7300F13D41 /* Tela02.swift */; };
 		C46F7D682A0472DC0094CA24 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C46F7D672A0472DC0094CA24 /* assets.xcassets */; };
+		C46F7D6B2A048F5E0094CA24 /* NSNotificationName+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F7D6A2A048F5E0094CA24 /* NSNotificationName+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C42FA4AA2A046C6000F13D41 /* Tela02.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tela02.storyboard; sourceTree = "<group>"; };
 		C42FA4AC2A046C7300F13D41 /* Tela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02.swift; sourceTree = "<group>"; };
 		C46F7D672A0472DC0094CA24 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
+		C46F7D6A2A048F5E0094CA24 /* NSNotificationName+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		C42FA4922A046ACD00F13D41 /* notificationCenterEProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				C46F7D692A048EFA0094CA24 /* Extensions */,
 				C42FA4A92A046C5500F13D41 /* Tela02 */,
 				C42FA4A82A046C4D00F13D41 /* Tela01 */,
 				C42FA4A72A046C3D00F13D41 /* Resources */,
@@ -95,6 +98,14 @@
 				C42FA4AC2A046C7300F13D41 /* Tela02.swift */,
 			);
 			path = Tela02;
+			sourceTree = "<group>";
+		};
+		C46F7D692A048EFA0094CA24 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C46F7D6A2A048F5E0094CA24 /* NSNotificationName+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				C42FA4982A046ACD00F13D41 /* ViewController.swift in Sources */,
 				C42FA4942A046ACD00F13D41 /* AppDelegate.swift in Sources */,
 				C42FA4962A046ACD00F13D41 /* SceneDelegate.swift in Sources */,
+				C46F7D6B2A048F5E0094CA24 /* NSNotificationName+Extension.swift in Sources */,
 				C42FA4AD2A046C7300F13D41 /* Tela02.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

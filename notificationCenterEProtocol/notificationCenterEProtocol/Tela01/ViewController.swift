@@ -15,6 +15,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
+        titleLabel.text = ""
+        configObserver()
     }
 
     func configObserver() {
@@ -23,11 +26,15 @@ class ViewController: UIViewController {
     }
     
     @objc func updateMacbook(notification: NSNotification) {
-        print(#function)
+        logoImageView.image = UIImage(named: "macbook_pro")
+        titleLabel.text = "Macbook Pro"
+        view.backgroundColor = notification.object as? UIColor
     }
     
     @objc func updateimac(notification: NSNotification) {
-        print(#function)
+        logoImageView.image = UIImage(named: "imac_pro")
+        titleLabel.text = "Imac das galaxias"
+        view.backgroundColor = notification.object as? UIColor
     }
     
     @IBAction func tappedClickUIButton(_ sender: UIButton) {
