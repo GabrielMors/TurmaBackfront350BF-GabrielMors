@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var photoImageView: UIImageView!
     
     @IBOutlet weak var editingImageButton: UIButton!
@@ -23,7 +23,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var viewModel: ViewModel = ViewModel()
+    let imagePicker: UIImagePickerController = UIImagePickerController()
+    
+    var listForCell: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +36,13 @@ class ViewController: UIViewController {
         configClearButton()
         configAddButton()
         configProtocol()
+        configImagePickerController()
     }
-
+    
+    private func configImagePickerController() {
+        imagePicker.delegate = self
+    }
+    
     private func configProtocol() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -89,18 +96,47 @@ class ViewController: UIViewController {
         addButton.layer.cornerRadius = 15
     }
     
+    
+    
+    @IBAction func tappedEditingButton(_ sender: UIButton) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true)
+    }
+    
+    @IBAction func tappedClearButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func tappedAddButton(_ sender: UIButton) {
+        listForCell.append(Person(name: textField.text ?? "", image: photoImageView.image ?? UIImage()))
+        tableView.reloadData()
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        listForCell.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: PersonCell.self), for: indexPath) as? PersonCell
-        
+        cell?.setupCell(list: listForCell[indexPath.row])
         return cell ?? UITableViewCell()
     }
     
 }
+
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            photoImageView.image = image
+        }
+        picker.dismiss(animated: true)
+    }
+    
+}
+

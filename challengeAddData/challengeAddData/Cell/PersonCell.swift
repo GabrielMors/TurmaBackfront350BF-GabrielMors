@@ -24,8 +24,8 @@ class PersonCell: UITableViewCell {
         
     }
 
-    public func setupCell(name: String) {
-        photoImageView.image = UIImage(systemName: name)
-        nameLabel.text = name
+    public func setupCell(list: Person) {
+        photoImageView.image = list.image
+        nameLabel.text = list.name
     }
 }

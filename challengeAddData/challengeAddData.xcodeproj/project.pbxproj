@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C444A4842A0941280075F4EB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C444A4832A0941280075F4EB /* Person.swift */; };
 		C46F7DB92A0592E80094CA24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F7DB82A0592E80094CA24 /* AppDelegate.swift */; };
 		C46F7DBB2A0592E80094CA24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F7DBA2A0592E80094CA24 /* SceneDelegate.swift */; };
 		C46F7DBD2A0592E80094CA24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46F7DBC2A0592E80094CA24 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C444A4832A0941280075F4EB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C46F7DB52A0592E80094CA24 /* challengeAddData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = challengeAddData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46F7DB82A0592E80094CA24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46F7DBA2A0592E80094CA24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C444A4822A0941190075F4EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C444A4832A0941280075F4EB /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C444A4852A0941BA0075F4EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C46F7DBE2A0592E80094CA24 /* Main.storyboard */,
+				C46F7DBC2A0592E80094CA24 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C46F7DAC2A0592E80094CA24 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +83,9 @@
 			children = (
 				C46F7DCC2A0592F30094CA24 /* Resources */,
 				C46F7DCD2A05A2E80094CA24 /* Cell */,
+				C444A4822A0941190075F4EB /* Model */,
+				C444A4852A0941BA0075F4EB /* View */,
 				C46F7DD32A05A5DB0094CA24 /* ViewModel */,
-				C46F7DBE2A0592E80094CA24 /* Main.storyboard */,
-				C46F7DBC2A0592E80094CA24 /* ViewController.swift */,
 				C46F7DC62A0592EA0094CA24 /* Info.plist */,
 			);
 			path = challengeAddData;
@@ -175,6 +194,7 @@
 				C46F7DD52A05A5EF0094CA24 /* ViewModel.swift in Sources */,
 				C46F7DBD2A0592E80094CA24 /* ViewController.swift in Sources */,
 				C46F7DB92A0592E80094CA24 /* AppDelegate.swift in Sources */,
+				C444A4842A0941280075F4EB /* Person.swift in Sources */,
 				C46F7DD02A05A3260094CA24 /* PersonCell.swift in Sources */,
 				C46F7DBB2A0592E80094CA24 /* SceneDelegate.swift in Sources */,
 			);
