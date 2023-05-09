@@ -117,6 +117,11 @@ class ViewController: UIViewController {
             photoImageView.image = UIImage(systemName: "person.circle.fill")
             tableView.reloadData()
             tableView.scrollToRow(at: IndexPath(row: listForCell.count - 1, section: 0), at: .bottom, animated: true)
+        } else {
+            let alertController = UIAlertController(title: "Ops!", message: "Informe um nome!", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "OK", style: .default)
+            alertController.addAction(okButton)
+            present(alertController, animated: true)
         }
     }
 }
