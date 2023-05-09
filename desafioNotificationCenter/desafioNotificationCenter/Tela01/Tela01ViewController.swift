@@ -9,21 +9,24 @@ import UIKit
 
 class Tela01ViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var adicionarButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configButton()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configButton() {
+        adicionarButton.clipsToBounds = true
+        adicionarButton.layer.cornerRadius = 10
+        adicionarButton.layer.borderWidth = 1
+        adicionarButton.layer.borderColor = UIColor.black.cgColor
     }
-    */
-
+    
+    @IBAction func tappedAddButton(_ sender: UIButton) {
+        nameTextField.text 
+    }
+    
 }
