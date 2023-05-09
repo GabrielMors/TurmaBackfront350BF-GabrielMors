@@ -9,14 +9,14 @@ import UIKit
 
 class ViewModel {
     
-//    private var listForCell: [PersonCell] = []
-    
- 
-//    public func numberOfRowsInSection() {
-//        listForCell
+//    private var listForCell: [Person] = []
+//    
+// 
+//    public func numberOfRowsInSection()  {
+//        listForCell.count
 //    }
 //
-//    public func cellForRowAt() {
-//
+//    public func cellForRowAt(index: Int) -> Person {
+//        listForCell[index]
 //    }
 }

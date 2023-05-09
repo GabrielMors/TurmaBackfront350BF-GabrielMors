@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     let imagePicker: UIImagePickerController = UIImagePickerController()
     
     var listForCell: [Person] = []
+//    var viewModel: ViewModel = ViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,8 +55,9 @@ class ViewController: UIViewController {
     }
     
     private func configImageView() {
-        photoImageView.image = UIImage(systemName: "person.fill")
+        photoImageView.image = UIImage(systemName: "person.circle.fill")
         photoImageView.tintColor = .black
+        photoImageView.contentMode = .scaleAspectFill
     }
     
     private func configLabel() {
@@ -109,9 +111,10 @@ class ViewController: UIViewController {
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
         listForCell.append(Person(name: textField.text ?? "", image: photoImageView.image ?? UIImage()))
+        nameLabel.text = ""
+        photoImageView.image = UIImage(systemName: "person.circle.fill")
         tableView.reloadData()
     }
-    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -126,6 +129,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        120
+    }
 }
 
 

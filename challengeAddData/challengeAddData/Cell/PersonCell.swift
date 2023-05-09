@@ -21,7 +21,7 @@ class PersonCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        photoImageView.tintColor = .black
     }
 
     public func setupCell(list: Person) {
