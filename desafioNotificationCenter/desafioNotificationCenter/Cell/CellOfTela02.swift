@@ -15,7 +15,9 @@ class CellOfTela02: UITableViewCell {
         return UINib(nibName: identifier, bundle: nil)
     }
 
+    
     @IBOutlet weak var nameLabel: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

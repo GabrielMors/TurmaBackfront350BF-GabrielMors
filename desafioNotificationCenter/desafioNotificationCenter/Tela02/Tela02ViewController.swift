@@ -15,7 +15,9 @@ class Tela02ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .darkGray
         configProtocol()
+        NotificationCenter.default.addObserver(self, selector: #selector(addName), name: Notification.Name("addName"), object: nil)
     }
     
     private func configProtocol() {
@@ -23,6 +25,18 @@ class Tela02ViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(CellOfTela02.nib(), forCellReuseIdentifier: CellOfTela02.identifier)
     }
+    
+    @objc func addName(notification: Notification) {
+        if let userInfo = notification.userInfo,
+              let name = userInfo["name"] as? String {
+            print(userInfo)
+               let newPerson = Person(name: name)
+            print(name)
+               list.append(newPerson)
+               tableView.reloadData()
+           }
+    }
+    
 }
 
 

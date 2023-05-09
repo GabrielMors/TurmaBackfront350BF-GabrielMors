@@ -8,7 +8,7 @@
 import UIKit
 
 class Tela01ViewController: UIViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
     
     @IBOutlet weak var adicionarButton: UIButton!
@@ -16,6 +16,10 @@ class Tela01ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configButton()
+    }
+    
+    private func configTextField() {
+        
     }
     
     private func configButton() {
@@ -26,7 +30,12 @@ class Tela01ViewController: UIViewController {
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
-        nameTextField.text 
+        guard let work = nameTextField.text,  !work.isEmpty else { return }
+        
+        let userInfo = ["name": work]
+        NotificationCenter.default.post(name: Notification.Name("addName"), object: nil, userInfo: userInfo)
+        tabBarController?.selectedIndex = 0
+        nameTextField.text = ""
     }
     
 }
