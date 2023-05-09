@@ -106,14 +106,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedClearButton(_ sender: UIButton) {
-        
+        listForCell.removeAll()
+        tableView.reloadData()
     }
     
     @IBAction func tappedAddButton(_ sender: UIButton) {
-        listForCell.append(Person(name: textField.text ?? "", image: photoImageView.image ?? UIImage()))
-        nameLabel.text = ""
-        photoImageView.image = UIImage(systemName: "person.circle.fill")
-        tableView.reloadData()
+        if let name = textField.text, !name.isEmpty{
+            listForCell.append(Person(name: textField.text ?? "", image: photoImageView.image ?? UIImage()))
+            textField.text = ""
+            photoImageView.image = UIImage(systemName: "person.circle.fill")
+            tableView.reloadData()
+            tableView.scrollToRow(at: IndexPath(row: listForCell.count - 1, section: 0), at: .bottom, animated: true)
+        }
     }
 }
 
