@@ -17,9 +17,9 @@
 		C444A4E12A0A71A40075F4EB /* Tela02ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C444A4E02A0A71A40075F4EB /* Tela02ViewController.storyboard */; };
 		C4DB43242A0A76F400F49417 /* Tela01ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4DB43232A0A76F400F49417 /* Tela01ViewController.storyboard */; };
 		C4DB43262A0A770C00F49417 /* Tela01ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB43252A0A770C00F49417 /* Tela01ViewController.swift */; };
-		C4DB432B2A0A79C600F49417 /* CellOfTela02.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB43292A0A79C600F49417 /* CellOfTela02.swift */; };
-		C4DB432C2A0A79C600F49417 /* CellOfTela02.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB432A2A0A79C600F49417 /* CellOfTela02.xib */; };
 		C4DB43302A0A7C8200F49417 /* Tela02Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB432F2A0A7C8200F49417 /* Tela02Model.swift */; };
+		C4DB433E2A0AB90B00F49417 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DB433C2A0AB90B00F49417 /* TableViewCell.swift */; };
+		C4DB433F2A0AB90B00F49417 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DB433D2A0AB90B00F49417 /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +35,9 @@
 		C444A4E02A0A71A40075F4EB /* Tela02ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tela02ViewController.storyboard; sourceTree = "<group>"; };
 		C4DB43232A0A76F400F49417 /* Tela01ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tela01ViewController.storyboard; sourceTree = "<group>"; };
 		C4DB43252A0A770C00F49417 /* Tela01ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela01ViewController.swift; sourceTree = "<group>"; };
-		C4DB43292A0A79C600F49417 /* CellOfTela02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellOfTela02.swift; sourceTree = "<group>"; };
-		C4DB432A2A0A79C600F49417 /* CellOfTela02.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellOfTela02.xib; sourceTree = "<group>"; };
 		C4DB432F2A0A7C8200F49417 /* Tela02Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela02Model.swift; sourceTree = "<group>"; };
+		C4DB433C2A0AB90B00F49417 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C4DB433D2A0AB90B00F49417 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				C4DB432E2A0A7C6D00F49417 /* Model */,
-				C4DB43282A0A79A800F49417 /* Cell */,
+				C4DB43402A0AB99700F49417 /* CellOfScreen2 */,
 				C4DB43272A0A770F00F49417 /* Tela01 */,
 				C444A4DD2A0A71600075F4EB /* Tela02 */,
 				C444A4DC2A0A71300075F4EB /* TabBar */,
@@ -119,21 +119,21 @@
 			path = Tela01;
 			sourceTree = "<group>";
 		};
-		C4DB43282A0A79A800F49417 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				C4DB432A2A0A79C600F49417 /* CellOfTela02.xib */,
-				C4DB43292A0A79C600F49417 /* CellOfTela02.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		C4DB432E2A0A7C6D00F49417 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C4DB432F2A0A7C8200F49417 /* Tela02Model.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C4DB43402A0AB99700F49417 /* CellOfScreen2 */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB433D2A0AB90B00F49417 /* TableViewCell.xib */,
+				C4DB433C2A0AB90B00F49417 /* TableViewCell.swift */,
+			);
+			path = CellOfScreen2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C444A4D42A0A70CA0075F4EB /* LaunchScreen.storyboard in Resources */,
-				C4DB432C2A0A79C600F49417 /* CellOfTela02.xib in Resources */,
+				C4DB433F2A0AB90B00F49417 /* TableViewCell.xib in Resources */,
 				C444A4E12A0A71A40075F4EB /* Tela02ViewController.storyboard in Resources */,
 				C4DB43242A0A76F400F49417 /* Tela01ViewController.storyboard in Resources */,
 				C444A4D12A0A70CA0075F4EB /* Assets.xcassets in Resources */,
@@ -213,9 +213,9 @@
 				C444A4DF2A0A718C0075F4EB /* Tela02ViewController.swift in Sources */,
 				C444A4CC2A0A70C90075F4EB /* ViewController.swift in Sources */,
 				C444A4C82A0A70C90075F4EB /* AppDelegate.swift in Sources */,
-				C4DB432B2A0A79C600F49417 /* CellOfTela02.swift in Sources */,
 				C4DB43302A0A7C8200F49417 /* Tela02Model.swift in Sources */,
 				C444A4CA2A0A70C90075F4EB /* SceneDelegate.swift in Sources */,
+				C4DB433E2A0AB90B00F49417 /* TableViewCell.swift in Sources */,
 				C4DB43262A0A770C00F49417 /* Tela01ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

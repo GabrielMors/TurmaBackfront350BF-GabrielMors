@@ -8,14 +8,14 @@
 import UIKit
 
 class Tela02ViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var list: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .lightGray
         configProtocol()
         NotificationCenter.default.addObserver(self, selector: #selector(addName), name: Notification.Name("addName"), object: nil)
     }
@@ -23,7 +23,7 @@ class Tela02ViewController: UIViewController {
     private func configProtocol() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(CellOfTela02.nib(), forCellReuseIdentifier: CellOfTela02.identifier)
+        tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
     }
     
     @objc func addName(notification: Notification) {
@@ -47,7 +47,7 @@ extension Tela02ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CellOfTela02.identifier, for: indexPath) as? CellOfTela02
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell
         cell?.setupCell(name: list[indexPath.row])
         return cell ?? UITableViewCell()
     }

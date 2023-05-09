@@ -34,17 +34,25 @@
                                     <action selector="tappedAddButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aTJ-eK-Yiq"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.and.pencil.and.ellipsis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ePR-I3-3Ot">
+                                <rect key="frame" x="76" y="215.66666666666663" width="240" height="129.00000000000006"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
+                            <constraint firstItem="ePR-I3-3Ot" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="156" id="77H-wh-fYd"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rff-91-CB1" secondAttribute="trailing" constant="141" id="8ht-nQ-meW"/>
                             <constraint firstItem="AO3-iQ-M59" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="IDN-11-9L9"/>
                             <constraint firstItem="rff-91-CB1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="140" id="Jpw-6W-peo"/>
                             <constraint firstItem="rff-91-CB1" firstAttribute="top" secondItem="AO3-iQ-M59" secondAttribute="bottom" constant="30" id="KPA-oV-a8E"/>
+                            <constraint firstItem="AO3-iQ-M59" firstAttribute="top" secondItem="ePR-I3-3Ot" secondAttribute="bottom" constant="60" id="KZ7-9O-JEB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="AO3-iQ-M59" secondAttribute="trailing" constant="20" id="UzY-lm-3Ty"/>
+                            <constraint firstItem="ePR-I3-3Ot" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="76" id="ZPX-0Z-6Hg"/>
                             <constraint firstItem="AO3-iQ-M59" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="d2M-DM-qpD"/>
                             <constraint firstItem="AO3-iQ-M59" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="eOO-oU-tv9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ePR-I3-3Ot" secondAttribute="trailing" constant="77" id="kus-Jf-wKR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -58,6 +66,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="80"/>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -15,11 +15,16 @@ class Tela01ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .lightGray
         configButton()
+        configTextField()
     }
     
     private func configTextField() {
-        
+        nameTextField.clipsToBounds = true
+        nameTextField.layer.cornerRadius = 10
+        nameTextField.layer.borderWidth = 1
+        nameTextField.layer.borderColor = UIColor.black.cgColor
     }
     
     private func configButton() {
