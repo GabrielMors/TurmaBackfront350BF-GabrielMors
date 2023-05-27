@@ -14,7 +14,7 @@ class HomeScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = .darkGray
+        tableView.backgroundColor = UIColor.lightPurple
         
         return tableView
     }()
@@ -22,7 +22,7 @@ class HomeScreen: UIView {
     lazy var contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor.purple
         
         return view
     }()
@@ -30,7 +30,7 @@ class HomeScreen: UIView {
     lazy var subContentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .darkGray
+        view.backgroundColor = UIColor.lightPurple
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
         
@@ -40,19 +40,30 @@ class HomeScreen: UIView {
     lazy var messageTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Digite aqui"
+        textField.tintColor = .white
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
         textField.borderStyle = .none
-        
+        textField.textColor = .white
+        let attributes: [NSAttributedString.Key: Any] = [
+               .foregroundColor: UIColor.white, // Defina a cor desejada do texto do placeholder
+               .font: UIFont.systemFont(ofSize: 18.5) // Defina a fonte desejada do texto do placeholder
+           ]
+           
+           // Crie um atributo de texto com os atributos definidos
+           let attributedPlaceholder = NSAttributedString(string: "Digite aqui", attributes: attributes)
+           
+           // Atribua o atributo de texto ao placeholder do TextField
+           textField.attributedPlaceholder = attributedPlaceholder
+           
         return textField
     }()
     
     lazy var sendButton: UIButton = {
         let button = UIButton ( )
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .lightGray
+        button.backgroundColor = UIColor.darkBlue
 //        button.isEnabled = false
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
