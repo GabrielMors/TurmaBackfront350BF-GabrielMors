@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C41900002A2265C20076F072 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */; };
 		C419FFE72A2019B40076F072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFE62A2019B40076F072 /* AppDelegate.swift */; };
 		C419FFE92A2019B40076F072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFE82A2019B40076F072 /* SceneDelegate.swift */; };
 		C419FFEB2A2019B40076F072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFEA2A2019B40076F072 /* HomeViewController.swift */; };
@@ -24,6 +25,7 @@
 		C419FFF22A2019B60076F072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C419FFF42A2019B60076F072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C419FFFC2A201B210076F072 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		C419FFE52A2019B40076F072 /* ChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				C419FFFE2A22655F0076F072 /* Utils */,
 				C419FFFB2A201B0D0076F072 /* Screen */,
 				C419FFEA2A2019B40076F072 /* HomeViewController.swift */,
 				C419FFFA2A201A900076F072 /* Resources */,
@@ -81,6 +84,14 @@
 				C419FFFC2A201B210076F072 /* HomeScreen.swift */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		C419FFFE2A22655F0076F072 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C419FFFD2A201B210076F072 /* HomeScreen.swift in Sources */,
+				C41900002A2265C20076F072 /* UIColor+Extensions.swift in Sources */,
 				C419FFEB2A2019B40076F072 /* HomeViewController.swift in Sources */,
 				C419FFE72A2019B40076F072 /* AppDelegate.swift in Sources */,
 				C419FFE92A2019B40076F072 /* SceneDelegate.swift in Sources */,

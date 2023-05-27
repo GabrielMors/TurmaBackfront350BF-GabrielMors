@@ -50,13 +50,22 @@ class HomeScreen: UIView {
     }()
     
     lazy var sendButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton ( )
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
-        button.isEnabled = false
+        button.backgroundColor = .lightGray
+//        button.isEnabled = false
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 8
+        button.tintColor = .white
+        button.setImage(UIImage (named: "send"), for: .normal)
+        button.addTarget (self, action: #selector (tappedSendButton), for: .touchUpInside)
         
         return button
     }()
+    
+    @objc private func tappedSendButton() {
+        print(#function)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,6 +82,7 @@ class HomeScreen: UIView {
         addSubview(contentView)
         contentView.addSubview(subContentView)
         subContentView.addSubview(messageTextField)
+        contentView.addSubview(sendButton)
     }
     
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
@@ -99,9 +109,14 @@ class HomeScreen: UIView {
             subContentView.heightAnchor.constraint(equalToConstant: 50),
             
             messageTextField.centerYAnchor.constraint(equalTo: subContentView.centerYAnchor),
-            messageTextField.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -10),
+            messageTextField.trailingAnchor.constraint(equalTo: sendButton.leadingAnchor, constant: -5),
             messageTextField.leadingAnchor.constraint(equalTo: subContentView.leadingAnchor, constant: 10),
             messageTextField.heightAnchor.constraint(equalToConstant: 40),
+            
+            sendButton.heightAnchor.constraint(equalToConstant: 45),
+            sendButton.widthAnchor.constraint(equalToConstant: 45),
+            sendButton.centerYAnchor.constraint(equalTo: messageTextField.centerYAnchor, constant: -10),
+            sendButton.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -5),
             
         ])
     }
