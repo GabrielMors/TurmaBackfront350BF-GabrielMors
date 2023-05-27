@@ -8,12 +8,12 @@
 import UIKit
 
 class HomeScreen: UIView {
-
+    
     lazy var tableViewChat: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.showsVerticalScrollIndicator = false
-        tableView.isScrollEnabled = true
+        tableView.separatorStyle = .none
         
         return tableView
     }()
@@ -26,22 +26,22 @@ class HomeScreen: UIView {
         return view
     }()
     
-    lazy var textField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Digite aqui"
-        textField.autocorrectionType = .no
-        textField.spellCheckingType = .no
-        textField.keyboardType = .default
-        
-        return textField
-    }()
-    
     lazy var subContentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .blue
         
         return view
+    }()
+    
+    lazy var textField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Digite aqui"
+        textField.autocorrectionType = .no
+        textField.spellCheckingType = .no
+        textField.keyboardType = .default
+        textField.backgroundColor = .black
+        return textField
     }()
     
     lazy var sendButton: UIButton = {
@@ -66,17 +66,19 @@ class HomeScreen: UIView {
     private func addSubViews() {
         addSubview(tableViewChat)
         addSubview(contentView)
-        addSubview(subContentView)
+        contentView.addSubview(subContentView)
+        subContentView.addSubview(textField)
+        
     }
     
-    public func configTableViewProtocol(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+    public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         tableViewChat.delegate = delegate
         tableViewChat.dataSource = dataSource
     }
     
     private func configConstraints() {
         NSLayoutConstraint.activate([
-        
+            
             tableViewChat.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableViewChat.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableViewChat.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -87,6 +89,17 @@ class HomeScreen: UIView {
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentView.heightAnchor.constraint(equalToConstant: 70),
+            
+            subContentView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            subContentView.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10),
+            subContentView.heightAnchor.constraint(equalToConstant: 40),
+            subContentView.widthAnchor.constraint(equalToConstant: 40),
+            
+            textField.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            textField.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10),
+            textField.heightAnchor.constraint(equalToConstant: 40),
+            textField.widthAnchor.constraint(equalToConstant: 40),
+            
         ])
     }
 }
