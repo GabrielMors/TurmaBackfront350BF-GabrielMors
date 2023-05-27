@@ -26,6 +26,16 @@ class HomeScreen: UIView {
         return view
     }()
     
+    lazy var textField: UITextField = {
+        let textField = UITextField()
+        textField.placeholder = "Digite aqui"
+        textField.autocorrectionType = .no
+        textField.spellCheckingType = .no
+        textField.keyboardType = .default
+        
+        return textField
+    }()
+    
     lazy var subContentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -45,6 +55,8 @@ class HomeScreen: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addSubViews()
+        configConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -65,10 +77,13 @@ class HomeScreen: UIView {
     private func configConstraints() {
         NSLayoutConstraint.activate([
         
-            tableViewChat.
-        
-        
-        
+            tableViewChat.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            tableViewChat.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableViewChat.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableViewChat.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor),
+            
+            contentView.topAnchor.constraint(equalTo: tableViewChat.bottomAnchor),
+            
         ])
     }
 }
