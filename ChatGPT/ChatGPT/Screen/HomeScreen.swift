@@ -21,7 +21,7 @@ class HomeScreen: UIView {
     lazy var contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
+        view.backgroundColor = .green
         
         return view
     }()
@@ -80,10 +80,13 @@ class HomeScreen: UIView {
             tableViewChat.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableViewChat.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableViewChat.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableViewChat.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor),
+            tableViewChat.bottomAnchor.constraint(equalTo: contentView.topAnchor),
             
-            contentView.topAnchor.constraint(equalTo: tableViewChat.bottomAnchor),
-            
+            contentView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            contentView.topAnchor.constraint(equalTo: tableViewChat.bottomAnchor, constant: 10),
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentView.heightAnchor.constraint(equalToConstant: 70),
         ])
     }
 }
