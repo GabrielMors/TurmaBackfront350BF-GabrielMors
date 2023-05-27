@@ -14,6 +14,7 @@ class HomeScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .darkGray
         
         return tableView
     }()
@@ -21,7 +22,7 @@ class HomeScreen: UIView {
     lazy var contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .green
+        view.backgroundColor = .black
         
         return view
     }()
@@ -29,18 +30,22 @@ class HomeScreen: UIView {
     lazy var subContentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .blue
+        view.backgroundColor = .darkGray
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 8
         
         return view
     }()
     
-    lazy var textField: UITextField = {
+    lazy var messageTextField: UITextField = {
         let textField = UITextField()
+        textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Digite aqui"
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
-        textField.backgroundColor = .black
+        textField.borderStyle = .none
+        
         return textField
     }()
     
@@ -67,8 +72,7 @@ class HomeScreen: UIView {
         addSubview(tableViewChat)
         addSubview(contentView)
         contentView.addSubview(subContentView)
-        subContentView.addSubview(textField)
-        
+        subContentView.addSubview(messageTextField)
     }
     
     public func configTableViewProtocols(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
@@ -84,21 +88,20 @@ class HomeScreen: UIView {
             tableViewChat.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableViewChat.bottomAnchor.constraint(equalTo: contentView.topAnchor),
             
-            contentView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-            contentView.topAnchor.constraint(equalTo: tableViewChat.bottomAnchor, constant: 10),
+            contentView.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
             contentView.heightAnchor.constraint(equalToConstant: 70),
             
             subContentView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            subContentView.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10),
-            subContentView.heightAnchor.constraint(equalToConstant: 40),
-            subContentView.widthAnchor.constraint(equalToConstant: 40),
+            subContentView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            subContentView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            subContentView.heightAnchor.constraint(equalToConstant: 50),
             
-            textField.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            textField.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 10),
-            textField.heightAnchor.constraint(equalToConstant: 40),
-            textField.widthAnchor.constraint(equalToConstant: 40),
+            messageTextField.centerYAnchor.constraint(equalTo: subContentView.centerYAnchor),
+            messageTextField.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -10),
+            messageTextField.leadingAnchor.constraint(equalTo: subContentView.leadingAnchor, constant: 10),
+            messageTextField.heightAnchor.constraint(equalToConstant: 40),
             
         ])
     }
