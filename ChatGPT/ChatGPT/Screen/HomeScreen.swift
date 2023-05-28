@@ -15,7 +15,6 @@ class HomeScreen: UIView {
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.lightPurple
-        
         return tableView
     }()
     
@@ -46,6 +45,7 @@ class HomeScreen: UIView {
         textField.keyboardType = .default
         textField.borderStyle = .none
         textField.textColor = .white
+        textField.delegate = self
         let attributes: [NSAttributedString.Key: Any] = [
                .foregroundColor: UIColor.white, // Defina a cor desejada do texto do placeholder
                .font: UIFont.systemFont(ofSize: 18.5) // Defina a fonte desejada do texto do placeholder
@@ -64,7 +64,7 @@ class HomeScreen: UIView {
         let button = UIButton ( )
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = UIColor.darkBlue
-//        button.isEnabled = false
+        button.isEnabled = false
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
         button.tintColor = .white
@@ -130,5 +130,19 @@ class HomeScreen: UIView {
             sendButton.trailingAnchor.constraint(equalTo: subContentView.trailingAnchor, constant: -5),
             
         ])
+    }
+}
+
+extension HomeScreen: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text as NSString? else { return false }
+        let updateText = text.replacingCharacters(in: range, with: string)
+        if updateText.isEmpty {
+            sendButton.isEnabled = false
+        } else {
+            sendButton.isEnabled = true
+        }
+        return true
     }
 }
