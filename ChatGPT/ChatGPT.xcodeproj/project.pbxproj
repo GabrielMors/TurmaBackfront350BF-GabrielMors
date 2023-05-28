@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C41900002A2265C20076F072 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */; };
+		C41900022A238ABF0076F072 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41900012A238ABE0076F072 /* UIViewController+Extensions.swift */; };
 		C419FFE72A2019B40076F072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFE62A2019B40076F072 /* AppDelegate.swift */; };
 		C419FFE92A2019B40076F072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFE82A2019B40076F072 /* SceneDelegate.swift */; };
 		C419FFEB2A2019B40076F072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFEA2A2019B40076F072 /* HomeViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C41900012A238ABE0076F072 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C419FFE32A2019B40076F072 /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C419FFE62A2019B40076F072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C419FFE82A2019B40076F072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */,
+				C41900012A238ABE0076F072 /* UIViewController+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				C41900002A2265C20076F072 /* UIColor+Extensions.swift in Sources */,
 				C419FFEB2A2019B40076F072 /* HomeViewController.swift in Sources */,
 				C419FFE72A2019B40076F072 /* AppDelegate.swift in Sources */,
+				C41900022A238ABF0076F072 /* UIViewController+Extensions.swift in Sources */,
 				C419FFE92A2019B40076F072 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
