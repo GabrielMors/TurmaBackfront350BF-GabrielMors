@@ -5,9 +5,15 @@
 //  Created by Gabriel Mors  on 25/05/23.
 //
 
+protocol HomeScreenProtocol: AnyObject {
+    func tappedSendButton(text: String)
+}
+
 import UIKit
 
 class HomeScreen: UIView {
+    
+    weak var delegate: HomeScreenProtocol?
     
     lazy var tableViewChat: UITableView = {
         let tableView = UITableView()
@@ -47,13 +53,11 @@ class HomeScreen: UIView {
         textField.textColor = .white
         textField.delegate = self
         let attributes: [NSAttributedString.Key: Any] = [
-               .foregroundColor: UIColor.white, // Defina a cor desejada do texto do placeholder
-               .font: UIFont.systemFont(ofSize: 18.5) // Defina a fonte desejada do texto do placeholder
+               .foregroundColor: UIColor.white, // A cor desejada do texto do placeholder
+               .font: UIFont.systemFont(ofSize: 18.5) //A fonte desejada do texto do placeholder
            ]
-           
            // Crie um atributo de texto com os atributos definidos
            let attributedPlaceholder = NSAttributedString(string: "Digite aqui", attributes: attributes)
-           
            // Atribua o atributo de texto ao placeholder do TextField
            textField.attributedPlaceholder = attributedPlaceholder
            
@@ -75,6 +79,8 @@ class HomeScreen: UIView {
     }()
     
     @objc private func tappedSendButton() {
+        let text = messageTextField.text ?? ""
+        delegate?.tappedSendButton(text: text)
         print(#function)
     }
     

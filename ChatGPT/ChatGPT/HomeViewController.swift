@@ -24,8 +24,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.purple
         screen?.configTableViewProtocols(delegate: self, dataSource: self)
+        screen?.delegate = self
     }
-
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -42,3 +43,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
 }
+
+extension HomeViewController: HomeScreenProtocol {
+    func tappedSendButton(text: String) {
+        print("Texto digitado: \(text)")
+    }
+}
+
