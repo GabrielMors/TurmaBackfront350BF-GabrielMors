@@ -81,7 +81,6 @@ class HomeScreen: UIView {
     @objc private func tappedSendButton() {
         let text = messageTextField.text ?? ""
         delegate?.tappedSendButton(text: text)
-        print(#function)
     }
     
     override init(frame: CGRect) {
