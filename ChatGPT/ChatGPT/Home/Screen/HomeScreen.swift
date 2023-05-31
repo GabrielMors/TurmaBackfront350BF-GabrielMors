@@ -20,14 +20,14 @@ class HomeScreen: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
-        tableView.backgroundColor = UIColor.lightPurple
+        tableView.backgroundColor = .backGround
         return tableView
     }()
     
     lazy var contentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.purple
+        view.backgroundColor = .backGround
         
         return view
     }()
@@ -35,7 +35,7 @@ class HomeScreen: UIView {
     lazy var subContentView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.lightPurple
+        view.backgroundColor = .white
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
         
@@ -45,46 +45,37 @@ class HomeScreen: UIView {
     lazy var messageTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.tintColor = .white
         textField.autocorrectionType = .no
         textField.spellCheckingType = .no
         textField.keyboardType = .default
         textField.borderStyle = .none
-        textField.textColor = .white
+        textField.placeholder = "Digite aqui:"
         textField.delegate = self
-        let attributes: [NSAttributedString.Key: Any] = [
-               .foregroundColor: UIColor.white, // A cor desejada do texto do placeholder
-               .font: UIFont.systemFont(ofSize: 18.5) //A fonte desejada do texto do placeholder
-           ]
-           // Crie um atributo de texto com os atributos definidos
-           let attributedPlaceholder = NSAttributedString(string: "Digite aqui", attributes: attributes)
-           // Atribua o atributo de texto ao placeholder do TextField
-           textField.attributedPlaceholder = attributedPlaceholder
-           
         return textField
     }()
     
     lazy var sendButton: UIButton = {
         let button = UIButton ( )
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = UIColor.darkBlue
+        button.backgroundColor = .darkBlue
         button.isEnabled = false
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.tintColor = .white
         button.setImage(UIImage (named: "send"), for: .normal)
         button.addTarget (self, action: #selector (tappedSendButton), for: .touchUpInside)
-        
         return button
     }()
     
     @objc private func tappedSendButton() {
         let text = messageTextField.text ?? ""
         delegate?.tappedSendButton(text: text)
+        messageTextField.text = ""
+        sendButton.isEnabled = false
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .backGround
         addSubViews()
         configConstraints()
     }

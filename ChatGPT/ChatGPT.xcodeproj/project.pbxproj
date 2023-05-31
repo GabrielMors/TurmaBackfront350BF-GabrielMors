@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C41900002A2265C20076F072 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */; };
 		C41900022A238ABF0076F072 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41900012A238ABE0076F072 /* UIViewController+Extensions.swift */; };
+		C419002D2A2780EB0076F072 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419002C2A2780EB0076F072 /* Message.swift */; };
+		C41900312A2783320076F072 /* OutgoingTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41900302A2783310076F072 /* OutgoingTextTableViewCell.swift */; };
 		C419FFE72A2019B40076F072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFE62A2019B40076F072 /* AppDelegate.swift */; };
 		C419FFE92A2019B40076F072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFE82A2019B40076F072 /* SceneDelegate.swift */; };
 		C419FFEB2A2019B40076F072 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419FFEA2A2019B40076F072 /* HomeViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		C41900012A238ABE0076F072 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		C419002C2A2780EB0076F072 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		C41900302A2783310076F072 /* OutgoingTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutgoingTextTableViewCell.swift; sourceTree = "<group>"; };
 		C419FFE32A2019B40076F072 /* ChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C419FFE62A2019B40076F072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C419FFE82A2019B40076F072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C419002A2A2780AA0076F072 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */,
+				C41900012A238ABE0076F072 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C419002B2A2780D80076F072 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C419002C2A2780EB0076F072 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C419002E2A2782C60076F072 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C419002F2A2782E20076F072 /* Cell */,
+				C419FFFB2A201B0D0076F072 /* Screen */,
+				C419FFEA2A2019B40076F072 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C419002F2A2782E20076F072 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C41900302A2783310076F072 /* OutgoingTextTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		C419FFDA2A2019B40076F072 = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				C419FFFE2A22655F0076F072 /* Utils */,
-				C419FFFB2A201B0D0076F072 /* Screen */,
-				C419FFEA2A2019B40076F072 /* HomeViewController.swift */,
+				C419002B2A2780D80076F072 /* Model */,
+				C419002E2A2782C60076F072 /* Home */,
 				C419FFFA2A201A900076F072 /* Resources */,
 				C419FFF42A2019B60076F072 /* Info.plist */,
 			);
@@ -91,8 +130,7 @@
 		C419FFFE2A22655F0076F072 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C419FFFF2A2265C20076F072 /* UIColor+Extensions.swift */,
-				C41900012A238ABE0076F072 /* UIViewController+Extensions.swift */,
+				C419002A2A2780AA0076F072 /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -173,6 +211,8 @@
 				C419FFE72A2019B40076F072 /* AppDelegate.swift in Sources */,
 				C41900022A238ABF0076F072 /* UIViewController+Extensions.swift in Sources */,
 				C419FFE92A2019B40076F072 /* SceneDelegate.swift in Sources */,
+				C41900312A2783320076F072 /* OutgoingTextTableViewCell.swift in Sources */,
+				C419002D2A2780EB0076F072 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
