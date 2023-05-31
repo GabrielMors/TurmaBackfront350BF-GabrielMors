@@ -1,5 +1,5 @@
 //
-//  OutgoingTextTableViewCell.swift
+//  IncomingTextMessageTableViewCell.swift
 //  ChatGPT
 //
 //  Created by Gabriel Mors  on 31/05/23.
@@ -7,16 +7,16 @@
 
 import UIKit
 
-class OutgoingTextTableViewCell: UITableViewCell {
-    
-    static let identifier: String = String(describing: OutgoingTextTableViewCell.self)
+class IncomingTextMessageTableViewCell: UITableViewCell {
+
+    static let identefier: String = String(describing: IncomingTextMessageTableViewCell.self)
     
     lazy var messageView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius  = 22
         view.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner , .layerMaxXMinYCorner]
-        view.backgroundColor = .purple
+        view.backgroundColor = .incomingColor
         return view
     }()
     
@@ -50,7 +50,7 @@ class OutgoingTextTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate([
             
             messageView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            messageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            messageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             messageView.widthAnchor.constraint(lessThanOrEqualToConstant: 250),
             
             messageLabel.topAnchor.constraint(equalTo: messageView.topAnchor, constant: 15),
