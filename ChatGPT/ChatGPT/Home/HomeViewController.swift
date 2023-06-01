@@ -23,8 +23,8 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        screen?.configTableViewProtocols(delegate: self, dataSource: self)
         screen?.delegate = self
+        screen?.configTableViewProtocols(delegate: self, dataSource: self)
     }
     
 }
@@ -37,6 +37,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = viewModel.loadCurrentMessage(indexPath: indexPath)
+        
         switch model.typeMessage {
         case .user:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: OutgoingTextTableViewCell.identifier, for: indexPath) as? OutgoingTextTableViewCell else {

@@ -5,11 +5,11 @@
 //  Created by Gabriel Mors  on 25/05/23.
 //
 
+import UIKit
+
 protocol HomeScreenProtocol: AnyObject {
     func tappedSendButton(text: String)
 }
-
-import UIKit
 
 class HomeScreen: UIView {
     
@@ -23,6 +23,7 @@ class HomeScreen: UIView {
         tableView.backgroundColor = .backGround
         tableView.register(OutgoingTextTableViewCell.self, forCellReuseIdentifier: OutgoingTextTableViewCell.identifier)
         tableView.register(IncomingTextMessageTableViewCell.self.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.identifier)
+        tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
         return tableView
     }()
     
