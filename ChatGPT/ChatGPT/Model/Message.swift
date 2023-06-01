@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum typeMessage {
+enum TypeMessage {
     case user
     case chatGPT
 }
 
 struct Message {
     var message: String
-    var typeMessage: typeMessage
+    var typeMessage: TypeMessage
 }

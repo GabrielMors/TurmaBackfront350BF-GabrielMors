@@ -21,6 +21,8 @@ class HomeScreen: UIView {
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
         tableView.backgroundColor = .backGround
+        tableView.register(OutgoingTextTableViewCell.self, forCellReuseIdentifier: OutgoingTextTableViewCell.identifier)
+        tableView.register(IncomingTextMessageTableViewCell.self.self, forCellReuseIdentifier: IncomingTextMessageTableViewCell.identifier)
         return tableView
     }()
     
@@ -28,7 +30,6 @@ class HomeScreen: UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .backGround
-        
         return view
     }()
     
@@ -38,7 +39,6 @@ class HomeScreen: UIView {
         view.backgroundColor = .white
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
-        
         return view
     }()
     
@@ -134,7 +134,7 @@ extension HomeScreen: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text as NSString? else { return false }
         let updateText = text.replacingCharacters(in: range, with: string)
-        if updateText.isEmpty {
+        if updateText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             sendButton.isEnabled = false
         } else {
             sendButton.isEnabled = true

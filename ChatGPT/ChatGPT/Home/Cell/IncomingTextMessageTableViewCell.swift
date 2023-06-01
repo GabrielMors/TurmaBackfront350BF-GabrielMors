@@ -9,7 +9,7 @@ import UIKit
 
 class IncomingTextMessageTableViewCell: UITableViewCell {
 
-    static let identefier: String = String(describing: IncomingTextMessageTableViewCell.self)
+    static let identifier: String = String(describing: IncomingTextMessageTableViewCell.self)
     
     lazy var messageView: UIView = {
         let view = UIView()
