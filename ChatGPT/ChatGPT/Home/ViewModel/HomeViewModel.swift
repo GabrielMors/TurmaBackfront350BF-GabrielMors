@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol HomeViewModelProtocol: AnyObject {
+    func reloadData()
+}
+
 class HomeViewModel {
     
-    private var messageList: [Message] = [Message(message: "Olá, Tudo bem?", typeMessage: .user),
-                                          Message(message: "Olá, Estou ótimo?", typeMessage: .chatGPT),
-    ]
-
+    private var messageList: [Message] = []
+    private var service: HomeService = HomeService()
+    private weak var delegate: HomeViewModelProtocol?
+    
+    public func delegate(delegate: HomeViewModelProtocol) {
+        self.delegate = delegate
+    }
+    
     public var numberOfRowsInSection: Int {
         return messageList.endIndex
     }
@@ -27,5 +35,18 @@ class HomeViewModel {
     
     public func addMessage(message: String, type: TypeMessage = .user) {
         messageList.insert(Message(message: message.trimmingCharacters(in: .whitespacesAndNewlines), typeMessage: type), at: .zero)
+    }
+    
+    public func fetchMessage(message: String) {
+        addMessage(message: message)
+        service.sendMessage(text: message) { result in
+            switch result {
+            case .success(let success):
+                self.addMessage(message: success, type: .chatGPT)
+            case .failure(let failure):
+                self.addMessage(message: failure.localizedDescription, type: .chatGPT)
+            }
+            self.delegate?.reloadData()
+        }
     }
 }
