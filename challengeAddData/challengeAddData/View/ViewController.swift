@@ -63,7 +63,6 @@ class ViewController: UIViewController {
     private func configLabel() {
         nameLabel.text = "Name"
         nameLabel.textColor = .white
-        
     }
     
     private func configEditingButton() {
@@ -97,8 +96,6 @@ class ViewController: UIViewController {
         addButton.clipsToBounds = true
         addButton.layer.cornerRadius = 15
     }
-    
-    
     
     @IBAction func tappedEditingButton(_ sender: UIButton) {
         imagePicker.sourceType = .photoLibrary
@@ -142,7 +139,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         120
     }
 }
-
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
